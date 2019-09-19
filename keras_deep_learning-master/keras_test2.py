@@ -1,17 +1,25 @@
 
 import keras
-import tensorflow as tf
+#import tensorflow as tf
 from keras.datasets import mnist
 from keras import models
 from keras import layers
 from keras.utils import to_categorical
 from keras import optimizers
-from keras.backend import tensorflow_backend as K
+#from keras.backend import tensorflow_backend as K
 
+import tensorflow as tf
+from keras.backend import tensorflow_backend as K
 ## tf backend config
+gpu_fraction = 0.45
 config = tf.compat.v1.ConfigProto()
-config.gpu_options.allow_growth = True
+#config.gpu_options.allow_growth = True
+config.gpu_options.per_process_gpu_memory_fraction=gpu_fraction
 K.set_session(tf.compat.v1.Session(config=config))
+
+#from keras import backend as K
+## 메모리 해제
+K.clear_session()
 
 #keras.__version__
 
