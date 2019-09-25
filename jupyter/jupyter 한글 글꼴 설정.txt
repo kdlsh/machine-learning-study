@@ -1,5 +1,0 @@
-네이버 나눔글꼴 설치 후
-
-C:\Users\User\.matplotlib 
-
-의 fontlist.json 을 삭제 후 재 import하면 자동으로 재생성
